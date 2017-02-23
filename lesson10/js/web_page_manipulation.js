@@ -20,15 +20,16 @@ function elementInfo(e){
 	var domObj = e.target;
 	var jObj = $(domObj);
 	$("#elementId").html(domObj.id);
-	$("#elementType").html(domObj.prop('tagName'));
+	$("#elementType").html(jObj.prop('tagName'));
 	$("#elementClass").html(domObj.className);
-	$("#elementSize").html(domObj.width() + "x" + jObj.height());
+	$("#elementSize").html(jObj.width() + "x" + jObj.height());
 	$("#elementPosition").html(jObj.offset().top + ", " + jObj.offset().left);
-	$("#elementColor").html(jObj.css("colo"));
+	$("#elementColor").html(jObj.css("color"));
 	$("#elementValue").html(jObj.val());
 	try{
 		$("#elementChecked").html(jObj.prop('checked').toString());
 	} catch (e) {}
+	$("#elementSource").html(jObj.attr('src'));
 }
 function windowResize(e){
 	$("#browserSize").html(window.innerWidth + "X" + window.innerHeight);
