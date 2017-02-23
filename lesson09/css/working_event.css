@@ -1,0 +1,9 @@
+div{
+	border-radius:5px;
+	margin:2px;
+	padding:5px;
+	background-color:lightgrey;
+	font-weight:bold;
+	display:inline-block;
+	cursor:pointer;
+}
